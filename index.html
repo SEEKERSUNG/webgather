@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>有用网站大推荐 · WebGather</title>
+  <meta name="description" content="一份持续收集的实用网站清单：发现、极客、设计、创作、综合素材、学习与工具，支持关键词搜索与深色模式。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b57'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121513" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (!theme) {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = theme;
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="有用网站大推荐 · 回到顶部">
+        <span class="brand-mark" aria-hidden="true">W</span>
+        <span class="brand-copy">
+          <strong>有用网站大推荐</strong>
+          <small>WebGather · 精选好站导航</small>
+        </span>
+      </a>
+
+      <div class="search-wrap" role="search">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.5-3.5"></path>
+        </svg>
+        <input id="search" type="search" placeholder="搜索网站、描述或分类…" autocomplete="off" spellcheck="false" aria-label="搜索网站">
+        <button id="clearSearch" class="clear-btn" type="button" hidden aria-label="清空搜索">&times;</button>
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      </div>
+
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换深色模式">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav id="toc" aria-label="分类导航"></nav>
+    </aside>
+
+    <main id="content">
+      <section class="hero">
+        <p class="hero-eyebrow">Curated Directory</p>
+        <h1>有用网站<br>大推荐</h1>
+        <p class="hero-intro">一份持续收集的实用网站清单，涵盖发现、极客、设计、创作、素材与工具。少一点漫无目的的搜索，多一点真正好用的网站。</p>
+        <div class="hero-stats">
+          <span><b id="statSites">0</b> 个网站</span>
+          <span class="stat-dot" aria-hidden="true"></span>
+          <span><b id="statCategories">0</b> 个分类</span>
+          <span class="stat-dot" aria-hidden="true"></span>
+          <span>持续更新</span>
+        </div>
+      </section>
+
+      <div class="results-bar" id="resultsBar" hidden>
+        <span id="searchStatus" aria-live="polite"></span>
+        <button id="clearInline" class="link-btn" type="button">清除筛选</button>
+      </div>
+
+      <div id="sections"></div>
+
+      <div id="emptyState" class="empty-state" hidden>
+        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.5-3.5"></path>
+        </svg>
+        <p>没有找到匹配的网站</p>
+        <span>换个关键词试试，或 <button id="clearEmpty" class="link-btn" type="button">清除筛选</button></span>
+      </div>
+
+      <noscript>
+        <p class="noscript-note">本站需要启用 JavaScript 才能展示网站列表。</p>
+      </noscript>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <span>有用网站大推荐 · 持续更新</span>
+    <span>纯静态站点，由 GitHub Pages 托管</span>
+  </footer>
+
+  <button id="toTop" class="to-top" type="button" aria-label="回到顶部" hidden>
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="m6 14 6-6 6 6"></path>
+    </svg>
+  </button>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
