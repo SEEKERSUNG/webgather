@@ -615,16 +615,40 @@ html[data-theme="dark"] .card-badge {
 .card-domain {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   margin-top: 2px;
   color: var(--text-faint);
   font-size: 11px;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.card-domain-text {
+  min-width: 0;
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-tag {
+  flex: none;
+  margin-left: auto;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 9.5px;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+}
+
+html[data-theme="dark"] .card-tag {
+  color: var(--accent);
 }
 
 .card-arrow {
+  flex: none;
   opacity: 0;
   transform: translate(-2px, 2px);
   transition: opacity 0.18s ease, transform 0.18s ease;

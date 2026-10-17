@@ -83,7 +83,14 @@
   }
 
   function itemHaystack(item, section, subsection) {
-    return [item.name, item.desc || "", item.url, section.name, subsection.name || ""]
+    return [
+      item.name,
+      item.desc || "",
+      item.url,
+      section.name,
+      subsection.name || "",
+      (item.tags || []).join(" ")
+    ]
       .join(" ")
       .toLowerCase();
   }
@@ -152,6 +159,15 @@
       ? '<span class="card-desc">' + highlight(item.desc, query) + "</span>"
       : '<span class="card-desc"></span>';
 
+    var tags = "";
+    if (item.tags && item.tags.length) {
+      tags = item.tags
+        .map(function (tag) {
+          return '<span class="card-tag">' + escapeHtml(tag) + "</span>";
+        })
+        .join("");
+    }
+
     return (
       '<a class="card"' +
       (matched ? "" : " hidden") +
@@ -169,7 +185,10 @@
       "</span>" +
       desc +
       '<span class="card-domain">' +
+      '<span class="card-domain-text">' +
       escapeHtml(domain) +
+      "</span>" +
+      tags +
       '<span class="card-arrow" aria-hidden="true">↗</span>' +
       "</span>" +
       "</span>" +

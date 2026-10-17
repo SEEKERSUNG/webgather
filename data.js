@@ -9,7 +9,7 @@ window.SITE_DATA = {
   sections: [
     {
       id: "discover",
-      name: "发现",
+      name: "发现 · 参考",
       subsections: [
         {
           name: "",
@@ -17,9 +17,7 @@ window.SITE_DATA = {
             { name: "ALLDATASHEETCN", url: "https://www.alldatasheetcn.com/", desc: "电子元件数据搜索" },
             { name: "观沧海", url: "https://www.ageeye.cn/", desc: "地图分享知识" },
             { name: "默沙东诊疗手册", url: "https://www.msdmanuals.cn/", desc: "自 1899 年备受信任的医学信息提供者" },
-            { name: "APESK 心理测试", url: "http://www.apesk.com/xinliceshi/", desc: "经典心理测试题集" },
-            { name: "网易见外工作台", url: "https://jianwai.youdao.com/index/0", desc: "音频转文字、视频自动生成字幕，还有翻译功能" },
-            { name: "讯飞听见", url: "https://www.iflyrec.com/", desc: "智慧办公平台｜在线语音录音转文字软件" }
+            { name: "APESK 心理测试", url: "http://www.apesk.com/xinliceshi/", desc: "经典心理测试题集" }
           ]
         }
       ]
@@ -74,9 +72,7 @@ window.SITE_DATA = {
         {
           name: "人工智能",
           items: [
-            { name: "A Neural Network Playground", url: "http://playground.tensorflow.org", desc: "学习体验人工智能" },
-            { name: "Amper Music", url: "https://www.ampermusic.com/", desc: "人工智能作曲" },
-            { name: "AIVA", url: "https://creators.aiva.ai/", desc: "人工智能作曲家" }
+            { name: "A Neural Network Playground", url: "http://playground.tensorflow.org", desc: "学习体验人工智能" }
           ]
         }
       ]
@@ -194,7 +190,8 @@ window.SITE_DATA = {
             { name: "Life of Vids", url: "https://www.lifeofvids.com/", desc: "免费视频、剪辑和循环" },
             { name: "Mazwai", url: "https://mazwai.com/#/grid", desc: "免费库存视频素材" },
             { name: "Mixkit", url: "https://mixkit.co/", desc: "下一个视频项目的免费资产" },
-            { name: "Distill", url: "https://wedistill.io/", desc: "视频素材" }
+            { name: "Distill", url: "https://wedistill.io/", desc: "视频素材" },
+            { name: "SOOGIF", url: "https://www.soogif.com/", desc: "GIF 制作、图片合成、动图搜索引擎" }
           ]
         },
         {
@@ -206,8 +203,8 @@ window.SITE_DATA = {
             { name: "Musopen", url: "https://musopen.org/", desc: "免费视频配乐网站" },
             { name: "FreePD", url: "https://freepd.com/electronic.php", desc: "免费视频配乐网站" },
             { name: "Epidemic Sound", url: "https://www.epidemicsound.com/", desc: "售卖版权的视频音乐配乐 BGM 网站" },
-            { name: "Amper Music", url: "https://www.ampermusic.com/", desc: "人工智能作曲" },
-            { name: "AIVA", url: "https://creators.aiva.ai/", desc: "人工智能作曲家" }
+            { name: "Amper Music", url: "https://www.ampermusic.com/", desc: "人工智能作曲", tags: ["AI"] },
+            { name: "AIVA", url: "https://creators.aiva.ai/", desc: "人工智能作曲家", tags: ["AI"] }
           ]
         },
         {
@@ -229,7 +226,7 @@ window.SITE_DATA = {
     },
     {
       id: "assets",
-      name: "综合素材",
+      name: "素材库",
       subsections: [
         {
           name: "",
@@ -237,15 +234,14 @@ window.SITE_DATA = {
             { name: "爱给网", url: "https://www.aigei.com/", desc: "音效配乐、3D 模型、视频素材、游戏素材免费下载" },
             { name: "The Stocks 2", url: "http://thestocks.im/", desc: "设计炫酷的全能素材网" },
             { name: "1001FreeDownloads", url: "https://www.1001freedownloads.com/", desc: "免费的纹理贴图图标字体样式俱全" },
-            { name: "千图网", url: "https://www.58pic.com/", desc: "免费设计图片素材网站" },
-            { name: "SOOGIF", url: "https://www.soogif.com/", desc: "GIF 制作、图片合成、动图搜索引擎" }
+            { name: "千图网", url: "https://www.58pic.com/", desc: "免费设计图片素材网站" }
           ]
         }
       ]
     },
     {
       id: "learning",
-      name: "综合学习",
+      name: "在线课程",
       subsections: [
         {
           name: "",
@@ -260,7 +256,7 @@ window.SITE_DATA = {
     },
     {
       id: "toolbox",
-      name: "综合工具",
+      name: "实用工具",
       subsections: [
         {
           name: "资源搜索",
@@ -271,17 +267,12 @@ window.SITE_DATA = {
           ]
         },
         {
-          name: "压图",
+          name: "图片与文件处理",
           items: [
             { name: "压缩图", url: "https://www.yasuotu.com/", desc: "在线图片压缩工具（jpg、png、gif）无损压缩 50%" },
             { name: "TinyJPG", url: "https://tinyjpg.com/", desc: "智能压缩 WebP、PNG 和 JPEG 图片" },
             { name: "智图", url: "https://zhitu.isux.us/", desc: "图片压缩在线工具，在线制作 WebP" },
-            { name: "iLoveIMG", url: "https://www.iloveimg.com/zh-cn", desc: "批量编辑图片" }
-          ]
-        },
-        {
-          name: "转换",
-          items: [
+            { name: "iLoveIMG", url: "https://www.iloveimg.com/zh-cn", desc: "批量编辑图片" },
             { name: "CloudConvert", url: "https://cloudconvert.com/", desc: "万能转换" }
           ]
         },
@@ -293,6 +284,13 @@ window.SITE_DATA = {
             { name: "ImgURL", url: "https://imgurl.org/", desc: "免费图床" },
             { name: "Z4A 图床", url: "https://www.z4a.net/", desc: "国内最良心的免费图床" },
             { name: "Pinbox", url: "https://withpinbox.com/explore/collection/332056", desc: "免费图床整理" }
+          ]
+        },
+        {
+          name: "效率工具",
+          items: [
+            { name: "网易见外工作台", url: "https://jianwai.youdao.com/index/0", desc: "音频转文字、视频自动生成字幕，还有翻译功能" },
+            { name: "讯飞听见", url: "https://www.iflyrec.com/", desc: "智慧办公平台｜在线语音录音转文字软件" }
           ]
         }
       ]
