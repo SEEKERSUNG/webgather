@@ -247,7 +247,8 @@ html[data-theme="dark"] .brand-mark {
   display: none;
 }
 
-.theme-toggle {
+.theme-toggle,
+.repo-link {
   flex: none;
   width: 40px;
   height: 40px;
@@ -258,10 +259,12 @@ html[data-theme="dark"] .brand-mark {
   background: var(--surface);
   color: var(--text-muted);
   cursor: pointer;
+  text-decoration: none;
   transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover,
+.repo-link:hover {
   color: var(--text);
   border-color: var(--border-strong);
 }
@@ -680,6 +683,18 @@ html[data-theme="dark"] .card-badge {
   font-size: 12px;
 }
 
+.footer-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+  border-bottom-color: currentColor;
+}
+
 /* ---------------- Back to top ---------------- */
 
 .to-top {
@@ -771,6 +786,10 @@ html[data-theme="dark"] .card-badge {
 
 @media (max-width: 520px) {
   .brand-copy {
+    display: none;
+  }
+
+  .repo-link {
     display: none;
   }
 }
