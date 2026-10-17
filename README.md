@@ -2,8 +2,8 @@
 
 一份持续收集的实用网站清单，涵盖 **发现 · 极客 · 设计 · 创作 · 综合素材 · 综合学习 · 综合工具**，支持关键词搜索与深色模式。
 
-- **在线访问：<https://seekersung.github.io/webGather/>**
-- **GitHub 仓库：<https://github.com/SEEKERSUNG/webGather>**
+- **在线访问：<https://seekersung.github.io/webgather/>**
+- **GitHub 仓库：<https://github.com/SEEKERSUNG/webgather>**
 
 ## 关于
 
